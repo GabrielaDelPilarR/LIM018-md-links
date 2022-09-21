@@ -1,10 +1,11 @@
-const mdLinks = require('../');
+import {existPath,isAbsolutePath,extensionPath,} from '../index.js';
+//const mdLinks = require('../');
 
 
-describe('mdLinks', () => {
+describe('existPath', () => {
 
-  it('should...', () => {
-    console.log('FIX ME!');
+  it('should be a function', () => {
+    expect (typeof existPath).toBe('function');
   });
 
 });
