@@ -147,8 +147,8 @@ function scanFile(path, config) {
           return {
             ...items,
             url: items.href,
-            status: error.response.status,
-            message: error.response.statusText
+            status: 400,
+            message: 'fail'
           }
         }
       })
@@ -196,6 +196,6 @@ const mdLinks = (path, options = { validate: false }) => {
   })
   }
 
-mdLinks('./prueba/link1.md', {stats:true}).then((data)=>{
+mdLinks('./prueba/link1.md', {validate:true}).then((data)=>{
 console.log(data,'hola')
 })
