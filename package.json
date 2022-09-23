@@ -9,6 +9,7 @@
     "axios": "^0.27.2",
     "chalk": "^4.1.2",
     "eslint": "^8.23.1",
+    "link": "^1.5.1",
     "markdown-it": "^13.0.1",
     "marked": "^4.1.0"
   },
@@ -18,11 +19,10 @@
   "scripts": {
     "test": "jest"
   },
-
+  "bin": {
+    "md-links": "./cli.js"
+  },
   "keywords": [],
   "autor": "Gabriela del Pilar Rojas Roque",
-  "license": "MTI",
-  "bin":{
-    "md-links": "./cli.js"
-  }
+  "license": "ISC"
 }

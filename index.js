@@ -8,7 +8,7 @@ const  jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
 const axios = require('axios');
-const { options } = require('marked');
+//const { options } = require('marked');
 
 
 //La ruta existe o no 
@@ -32,7 +32,7 @@ const isFile = (path) => fs.statSync(path).isFile()
 const extensionPath = (ispath) => path.extname(ispath) === '.md';
 
 //Revisando si la ruta existe y es absoluta
-const checkPath = (path) => {
+/*const checkPath = (path) => {
     if(fs.existsSync(path)){
       const absolutePath = isAbsolutePath(path);
       if(extensionPath(absolutePath)){
@@ -40,7 +40,7 @@ const checkPath = (path) => {
       }
     } 
   }
-
+*/
 //console.log(checkPath('./prueba/link1.md'));
 
 //Leyendo un archivo
@@ -130,7 +130,7 @@ const recursionToGetFilesPath = (ispath) => {
 };
 
 
-console.log(recursionToGetFilesPath('./prueba'), 'recursion')
+//console.log(recursionToGetFilesPath('./prueba'), 'recursion')
 
 function scanFile(path, config) {
   return new Promise((resolve) => {
@@ -197,5 +197,15 @@ const mdLinks = (path, options = { validate: false }) => {
   }
 
 mdLinks('./prueba/link1.md', {validate:true}).then((data)=>{
-console.log(data,'hola')
+//console.log(data,'hola')
 })
+
+module.exports = {
+  existPath,
+  isAbsolutePath,
+  extensionPath,
+  routeIsDir,
+  isFile,
+  openDir,
+  readFile
+}
